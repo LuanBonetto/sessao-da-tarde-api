@@ -17,6 +17,6 @@ jobs:
       - run: npm build
       - uses: w9jds/firebase-action@master
         with:
-          args: functions:config:set someservice.key=secrets.API_KEY someservice.auth=secrets.AUTH_DOMAIN someservice.database=secrets.DATABASE_URL someservice.project=secrets.PROJECT_ID someservice.storage=secrets.STORAGE_BUCKET someservice.messaging=secrets.MESSAGING_SENDER_ID someservice.app=secrets.APP_ID && deploy --only functions
+          args: functions:config:set someservice.key=secrets.API_KEY someservice.auth=secrets.AUTH_DOMAIN someservice.database=secrets.DATABASE_URL someservice.project=secrets.PROJECT_ID someservice.storage=secrets.STORAGE_BUCKET someservice.messaging=secrets.MESSAGING_SENDER_ID someservice.app=secrets.APP_ID
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}     
