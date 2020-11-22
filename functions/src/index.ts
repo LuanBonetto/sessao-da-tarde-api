@@ -1,9 +1,9 @@
 import * as functions from "firebase-functions";
 import { AddressInfo } from "net";
-import * as express from "express";
 import * as cors from "cors";
 import * as admin from "firebase-admin";
 import firebase from "firebase";
+import * as express from 'express';
 import { Request, Response } from 'express';
 
 const app = express();
@@ -23,7 +23,7 @@ const firebaseConfig = {
 admin.initializeApp(functions.config().firebase);
 firebase.initializeApp(firebaseConfig);
 
-const db = admin.firestore();
+// const db = admin.firestore();
 
 app.get('/teste', async(req: Request, res: Response) => {
   try {
@@ -34,11 +34,11 @@ app.get('/teste', async(req: Request, res: Response) => {
     // })
 
     res.status(200).send({
-      message: 'Hello World'
+      message: 'Hello World',
     })
   } catch (err) {
     res.status(400).send({
-      message: err.message
+      message: err.message,
     })
   }
 })
