@@ -1,0 +1,20 @@
+{
+  "name": "sessao-da-tarde-api",
+  "version": "1.0.0",
+  "description": "API que fornece informações de todas as sessões da tarde que tiveram até o momento.",
+  "scripts": {
+    "postinstall": "npm run install-functions",
+    "install-functions": "cd functions && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuanBonetto/sessao-da-tarde-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuanBonetto/sessao-da-tarde-api/issues"
+  },
+  "homepage": "https://github.com/LuanBonetto/sessao-da-tarde-api#readme"
+}
