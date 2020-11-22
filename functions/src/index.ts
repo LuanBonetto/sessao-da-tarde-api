@@ -25,7 +25,7 @@ firebase.initializeApp(firebaseConfig);
 
 // const db = admin.firestore();
 
-app.get('teste', endpointTeste);
+app.get('/teste', endpointTeste);
 
 const server = app.listen(process.env.PORT || 3000, () => {
   if (server) {
