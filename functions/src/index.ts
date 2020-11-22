@@ -4,7 +4,7 @@ import * as cors from "cors";
 import * as admin from "firebase-admin";
 import firebase from "firebase";
 import * as express from 'express';
-import { Request, Response } from 'express';
+import { endpointTeste } from './temporaryEndpoint';
 
 const app = express();
 app.use(cors({ origin: true }), express.json());
@@ -25,23 +25,7 @@ firebase.initializeApp(firebaseConfig);
 
 // const db = admin.firestore();
 
-app.get('/teste', async(req: Request, res: Response) => {
-  try {
-
-    // await db.collection('teste').doc().set({
-    //   nome: 'Luan',
-    //   sobrenome: 'Bonetto'
-    // })
-
-    res.status(200).send({
-      message: 'Hello World',
-    })
-  } catch (err) {
-    res.status(400).send({
-      message: err.message,
-    })
-  }
-})
+app.get('teste', endpointTeste);
 
 const server = app.listen(process.env.PORT || 3000, () => {
   if (server) {
