@@ -6,7 +6,7 @@ on:
 
 jobs:
   firebase-deploy:
-    runs-on: ubuntu-lasted
+    runs-on: [ ubuntu-latest ]
     
     steps:
       - uses: actions/checkout@master
