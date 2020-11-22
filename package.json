@@ -4,7 +4,8 @@
   "description": "API que fornece informações de todas as sessões da tarde que tiveram até o momento.",
   "scripts": {
     "postinstall": "npm run install-functions",
-    "install-functions": "cd functions && npm install"
+    "install-functions": "cd functions && npm install",
+    "deploy": "cd functions && npm run deploy"
   },
   "repository": {
     "type": "git",
