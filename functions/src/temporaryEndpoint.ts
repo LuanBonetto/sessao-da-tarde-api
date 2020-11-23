@@ -7,7 +7,7 @@ export const endpointTeste = async(req: Request, res: Response) => {
   
       await db.collection('teste').doc().set({
         nome: 'Luan',
-        sobrenome: 'Bonetto'
+        sobrenome: 'Bonetto',
       })
   
       res.status(200).send({
