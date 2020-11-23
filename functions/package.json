@@ -8,10 +8,12 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "dev": "firebase emulators:start"
+    "dev": "npm run build && firebase emulators:start",
+    "config:list": "firebase functions:config:get",
+    "config:remove": "firebase functions:config:unset someservice"
   },
   "engines": {
-    "node": "8"
+    "node": "12"
   },
   "main": "lib/index.js",
   "dependencies": {
