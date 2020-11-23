@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 // import { AddressInfo } from "net";
 import cors from "cors";
-import * as admin from "firebase-admin";
+import firebaseAdmin from "firebase-admin";
 // import firebase from "firebase";
 import express from 'express';
 import { endpointTeste } from './temporaryEndpoint';
@@ -20,12 +20,12 @@ exports.app = functions.https.onRequest(app);
 //   appId: functions.config().someservice.app,
 // }
 
-admin.initializeApp(functions.config().firebase);
+firebaseAdmin.initializeApp(functions.config().firebase);
 // firebase.initializeApp(firebaseConfig);
 
 // const db = admin.firestore();
 
-export const db = admin.firestore();
+export const db = firebaseAdmin.firestore();
 
 app.get('/teste', endpointTeste);
 
