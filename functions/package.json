@@ -22,7 +22,7 @@
     "firebase": "^8.1.1",
     "firebase-admin": "^9.4.1",
     "firebase-functions": "^3.12.0",
-    "puppeteer": "^3.0.4"
+    "puppeteer": "^5.5.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.8",
