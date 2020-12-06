@@ -1,5 +1,4 @@
 import * as functions from "firebase-functions";
-// import { AddressInfo } from "net";
 import cors from "cors";
 import firebaseAdmin from "firebase-admin";
 // import firebase from "firebase";
@@ -28,12 +27,3 @@ firebaseAdmin.initializeApp(functions.config().firebase);
 export const db = firebaseAdmin.firestore();
 
 app.get('/teste', endpointTeste);
-
-// const server = app.listen(process.env.PORT || 3000, () => {
-//   if (server) {
-//     const address = server.address() as AddressInfo;
-//     console.log(`Server is running in http://localhost:${address.port}`);
-//   } else {
-//     console.error(`Failure upon starting server.`);
-//   }
-// });
